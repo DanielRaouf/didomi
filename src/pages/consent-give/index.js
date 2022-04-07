@@ -21,10 +21,10 @@ const GiveConsents = () => {
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
             <Container>
-                <TextField error={errors.name} {...register("name", { required: true })} id="name" label="Name" variant="standard" />
-                <TextField error={errors.email} {...register("email", { required: true, pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i })} id="email" label="Email address" variant="standard" />
-                {list?.map((consent) => <FormControlLabel key={consent.id} label={consent.name} control={<Checkbox {...register(`consents.${consent.name}`)} />} />)}
-                <Button size='large' variant="contained" type="submit" >Give consent</Button>
+                <TextField error={!!errors.name} {...register("name", { required: true })} data-testid="name" label="Name" variant="standard" />
+                <TextField error={!!errors.email} {...register("email", { required: true, pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i })} data-testid="email" label="Email address" variant="standard" />
+                {list?.map((consent) => <FormControlLabel data-testid={`consent_${consent.id}`} key={consent.id} label={consent.name} control={<Checkbox {...register(`consents.${consent.name}`)} />} />)}
+                <Button id='submit_btn' size='large' variant="contained" type="submit" >Give consent</Button>
             </Container>
         </form>
     );

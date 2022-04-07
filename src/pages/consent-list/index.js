@@ -1,5 +1,5 @@
-import { useUsersConsents } from "../../data";
 import { DataGrid } from "@mui/x-data-grid";
+import { useUsersConsents } from "../../data";
 
 const ListConsents = () => {
     const { list } = useUsersConsents()
@@ -29,7 +29,7 @@ const ListConsents = () => {
                 rows={list}
                 columns={columns}
                 pageSize={2}
-                rowsPerPageOptions={[5]}
+                rowsPerPageOptions={[2,5]}
                 disableSelectionOnClick
             />
         </div>
