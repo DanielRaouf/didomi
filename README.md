@@ -22,3 +22,19 @@ Expected results
 
 Test Suites: 1 passed, 1 total
 Tests:       3 passed, 3 total
+
+
+### js fetch function is mocked using
+
+`./src/data/api-mock.js`
+
+### Endpoints
+
+GET: http://localhost/consents
+Returns the consent checkbox list
+
+GET: http://localhost/user/consents
+Returns the submitted user consents
+
+POST: http://localhost/user/consents
+Add a new user consent
