@@ -9,24 +9,10 @@ import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import { styled, useTheme } from '@mui/material/styles';
+import { useTheme } from '@mui/material/styles';
 import * as React from 'react';
-import { Link } from 'react-router-dom';
+import { DrawerHeader, drawerWidth, StyledLink } from '../styled';
 
-const drawerWidth = 200;
-
-const DrawerHeader = styled('div')(({ theme }) => ({
-    display: 'flex',
-    alignItems: 'center',
-    padding: theme.spacing(0, 1),
-    ...theme.mixins.toolbar,
-    justifyContent: 'flex-end',
-}));
-
-const StyledLink = styled(Link)`
-    text-decoration: none;
-    color: #5a5757;
-`
 const SideMenu = ({ open, setOpen }) => {
     const theme = useTheme();
 

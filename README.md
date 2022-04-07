@@ -1,4 +1,4 @@
-# Getting Started 
+# Getting Started with the Didomi FE test
 
 In the project directory, run:
 
